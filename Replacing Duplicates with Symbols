@@ -1,0 +1,12 @@
+symbols = ['True', '#', '$', '%', '&', '*', '!', '?']
+nums= [1, 2, 3, 3, 5,8,9,9,9]
+result = []
+symbol_index = 0
+for i in range(len(nums)):
+    if nums[i] in nums[:i]:
+        result.append(symbols[symbol_index % len(symbols)])
+        symbol_index += 1
+    else:
+        result.append(str(nums[i]))
+
+print(", ".join(result))
